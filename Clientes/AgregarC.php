@@ -1,5 +1,5 @@
 
- agregar c
+ Agregar C
 <?php
 
 $nombre = $apellido = $telefono = "";

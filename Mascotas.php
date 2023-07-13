@@ -2,11 +2,13 @@
 
 
 
-<form action="http://localhost/ADVET/index.php" method="get">
+<form action="http://localhost/ADVET/index.php" method="post">
 
 <input type="submit" name="" value="Salir">
 </form>
-<form action="" method="get">
+
+<H1>Mascotas</H1>
+<form action="" method="post">
 
 <input type="submit" name="menu2" value="Agregar">
 <input type="submit" name="menu2" value="Remover">
@@ -19,7 +21,7 @@
 
 <?php
 
-$menuM = $_GET["menu2"];
+$menuM = $_POST["menu2"];
 
 
 echo $menuM;
