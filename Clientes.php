@@ -1,43 +1,47 @@
 <?php
-echo"Clientes
+
+
+?>
 
 
 
-0 = salir
+<form action="http://localhost/ADVET/index1.php" method="post">
+
+   	<input type="submit" name="menu" value="Salir">
+</form>
+<form action="" method="post">
+
+    <input type="submit" name="menu" value="Agregar">
+	<input type="submit" name="menu" value="Remover">
+	<input type="submit" name="menu" value="Listar">
 
 
-1 = agregar
-
-2 = borrar
-
-3 = listar
+</form>
 
 
-";
 
+<?php
+
+$menuC = $_POST["menu"];
 
 
 
 
-$menuC = rand(1 , 3);
 echo $menuC;
 
 
 switch($menuC)
 									{
-										case '0':
-											include('./index.php');
-											break;
-
-										case '1':
+										
+										case 'Agregar':
 											include('./Clientes/AgregarC.php');
 											break;
 											
-										case '2':
+										case 'Remover':
 											include('./Clientes/BorrarC.php');
 											break;
 											
-										case '3':
+										case 'Listar':
 											include('./Clientes/ListarC.php');
 											break;
 

@@ -1,11 +1,22 @@
-<?php
-	if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER['HTTPS'])) {
-		$uri = 'https://';
-	} else {
-		$uri = 'http://';
-	}
-	$uri .= $_SERVER['HTTP_HOST'];
-	header('Location: '.$uri.'/dashboard/');
-	exit;
-?>
-Something is wrong with the XAMPP installation :-(
+
+
+
+
+<div >
+    <div ><button onclick="location.href='Clientes.php'"><h1>Clientes</h1></button></div>
+
+    <div ><button onclick="location.href='Mascotas.php'"><h1>Mascotas</h1></button></div>
+
+    <div ><button onclick="location.href='Turnos.php'"><h1>Turnos</h1></button></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
