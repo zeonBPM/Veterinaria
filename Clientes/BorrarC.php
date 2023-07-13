@@ -1,1 +1,1 @@
-borrar c
+ borrar c

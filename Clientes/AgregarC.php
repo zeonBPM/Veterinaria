@@ -1,12 +1,8 @@
 
-agregar c
+ agregar c
 <?php
 
 $nombre = $apellido = $telefono = "";
-
-
-
-
 
 
 
@@ -41,24 +37,11 @@ $nombre = $apellido = $telefono = "";
 
 
 
-
-
-
-
+  
 
 
   }
 
-
-
-
-
-  function get_input($dato) {
-        $dato = trim($dato);
-        $dato = stripslashes($dato);
-        $dato = htmlspecialchars($dato);
-        return $dato;
-      }
 ?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
@@ -77,9 +60,9 @@ Telefono: <input type="text" name="telefono" value="<?php echo $telefono;?>">
 
 $cliente = new Cliente();
 
-$cliente->set_nombre(get_input($_POST["nombre"]));
-$cliente->set_apellido(get_input($_POST["apellido"]));
-$cliente->set_telefono(get_input($_POST["telefono"]));
+$cliente->set_nombre($_POST["nombre"]);
+$cliente->set_apellido($_POST["apellido"]);
+$cliente->set_telefono($_POST["telefono"]);
 
 echo "<h2>Datos Ingresados:</h2>";
 echo "Nombre: ";

@@ -1,12 +1,5 @@
 
-<!DOCTYPE HTML>  
-<html>
-<head>
-<style>
-</style>
-</head>
-<body> 
-Agregar M
+ Agregar M
 <?php
 
 $nombre = $especie = $edad = "";
@@ -60,12 +53,7 @@ $nombre = $especie = $edad = "";
 
 
 
-  function get_input($dato) {
-        $dato = trim($dato);
-        $dato = stripslashes($dato);
-        $dato = htmlspecialchars($dato);
-        return $dato;
-      }
+
 ?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
@@ -84,9 +72,9 @@ Edad: <input type="text" name="edad" value="<?php echo $edad;?>">
 
 $mascota = new Mascota();
 
-$Mascota->set_nombre(get_input($_POST["nombre"]));
-$Mascota->set_especie(get_input($_POST["especie"]));
-$Mascota->set_edad(get_input($_POST["edad"]));
+$mascota->set_nombre($_POST["nombre"]);
+$mascota->set_especie($_POST["especie"]);
+$mascota->set_edad($_POST["edad"]);
 
 echo "<h2>Datos Ingresados:</h2>";
 echo "Nombre: ";
@@ -103,8 +91,3 @@ echo "<br>";
 ?>
 
 
-
-
-
-</body>
-</html>

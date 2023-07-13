@@ -2,15 +2,15 @@
 
 
 
-<form action="http://localhost/ADVET/index.php" method="post">
+<form action="http://localhost/ADVET/index.php" method="get">
 
-<input type="submit" name="menu" value="Salir">
+<input type="submit" name="" value="Salir">
 </form>
-<form action="" method="post">
+<form action="" method="get">
 
-<input type="submit" name="menu" value="Agregar">
-<input type="submit" name="menu" value="Remover">
-<input type="submit" name="menu" value="Listar">
+<input type="submit" name="menu2" value="Agregar">
+<input type="submit" name="menu2" value="Remover">
+<input type="submit" name="menu2" value="Listar">
 
 
 </form>
@@ -19,15 +19,13 @@
 
 <?php
 
-$menuC = $_POST["menu"];
+$menuM = $_GET["menu2"];
 
 
+echo $menuM;
 
 
-echo $menuC;
-
-
-switch($menuC)
+switch($menuM)
 							 {
 								 
 								 case 'Agregar':
