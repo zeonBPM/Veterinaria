@@ -11,6 +11,8 @@ $dueño = $mascota = $fecha = "";
   public $dueño = "";
   public $mascota = "";
   public $fecha = "";
+
+  public $hora = "";
  
   // Declaración de un método
   function set_dueño($dueño) {
@@ -33,7 +35,12 @@ $dueño = $mascota = $fecha = "";
     return $this->fecha;
   }
 
-
+  function set_hora($hora) {
+    $this->hora = $hora;
+  }
+  function get_hora() {
+    return $this->hora;
+  }
 
   
 

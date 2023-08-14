@@ -1,25 +1,23 @@
-
 <?php
 
-
-
-$nombre = $especie = $edad = "";
-
-
-
-
-
-
+$Mascotas = array();
 
 
   class Mascota
   {
-  // Declaración de una propiedad
+  public $dueño = "";
   public $nombre = "";
   public $especie = "";
   public $edad = "";
  
-  // Declaración de un método
+
+  function set_dueño($dueño){
+    $this->dueño = $dueño;
+  }
+ 
+  function get_dueño() {
+    return $this->dueño;
+  }
   function set_nombre($nombre) {
     $this->nombre = $nombre;
   }
@@ -49,6 +47,26 @@ $nombre = $especie = $edad = "";
 
 
   }
+  function agregar_mascota($mascota){
+    $dueño = $nombre = $especie = $edad = null;
+    echo "\n";
+    echo "dueño: ";
+    $dueño =  trim(fgets(STDIN));
+    echo "nombre:  ";
+    $nombre = trim(fgets(STDIN));
+    echo "especie:  ";
+    $especie = trim(fgets(STDIN));
+    echo "edad:  ";
+    $edad = trim(fgets(STDIN));
 
-
+    $mascota->set_dueño($dueño);
+    $mascota->set_nombre($nombre);
+    $mascota->set_especie($especie);
+    $mascota->set_edad($edad);
+  
+  
+  }
+  function borrar_mascota($mascota){
+    unset($Mascotas[$mascota]);
+    }
 ?>

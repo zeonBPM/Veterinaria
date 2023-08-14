@@ -9,6 +9,7 @@ $Clientes = array();
   public $nombre = "";
   public $apellido = "";
   public $telefono = "";
+
  
 
   function set_nombre($nombre) {
@@ -36,6 +37,7 @@ $Clientes = array();
   }
 function agregar_cliente($cliente){
   $nombre = $apellido = $telefono = '';
+  echo "\n";
   echo "nombre:  ";
   $nombre = trim(fgets(STDIN));
   echo "apellido:  ";
