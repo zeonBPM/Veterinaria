@@ -1,5 +1,4 @@
-
- Agregar C
+Agregar C
 <?php
 
 $nombre = $apellido = $telefono = "";
@@ -7,53 +6,53 @@ $nombre = $apellido = $telefono = "";
 
 
 
-  class Cliente
-  {
+class Cliente
+{
   // Declaración de una propiedad
   public $nombre = "";
   public $apellido = "";
   public $telefono = "";
- 
+
   // Declaración de un método
-  function set_nombre($nombre) {
+  function set_nombre($nombre)
+  {
     $this->nombre = $nombre;
   }
-  function get_name() {
+  function get_name()
+  {
     return $this->nombre;
   }
 
-  function set_apellido($apellido) {
+  function set_apellido($apellido)
+  {
     $this->apellido = $apellido;
   }
-  function get_apellido() {
+  function get_apellido()
+  {
     return $this->apellido;
   }
-  function set_telefono($telefono) {
+  function set_telefono($telefono)
+  {
     $this->telefono = $telefono;
   }
-  function get_telefono() {
+  function get_telefono()
+  {
     return $this->telefono;
   }
-
-
-
-  
-
-
-  }
+}
 
 ?>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
-Nombre: <input type="text" name="nombre" value="<?php echo $nombre;?>">
+  Nombre: <input type="text" name="nombre" value="<?php echo $nombre; ?>">
 
-Apellido: <input type="text" name="apellido" value="<?php echo $apellido;?>">
+  Apellido: <input type="text" name="apellido" value="<?php echo $apellido; ?>">
 
-Telefono: <input type="text" name="telefono" value="<?php echo $telefono;?>">
+  Telefono: <input type="text" name="telefono" value="<?php echo $telefono; ?>">
 
 
-  <input type="submit" name="Enviar" value="enviar">  
+  <input type="submit" name="Enviar" value="enviar">
 </form>
 
 <?php
@@ -66,17 +65,14 @@ $cliente->set_telefono($_POST["telefono"]);
 
 echo "<h2>Datos Ingresados:</h2>";
 echo "Nombre: ";
-echo $cliente -> get_name();
+echo $cliente->get_name();
 echo "<br>";
 echo "Apellido: ";
-echo $cliente -> get_apellido();
+echo $cliente->get_apellido();
 echo "<br>";
 echo "Telefono: ";
-echo $cliente -> get_telefono();
+echo $cliente->get_telefono();
 echo "<br>";
 
 
 ?>
-
-
-

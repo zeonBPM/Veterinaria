@@ -1,49 +1,9 @@
 
-
-
-
-<form action="http://localhost/ADVET/index.php" method="post">
-
-<input type="submit" name="" value="Salir">
-</form>
-
-<H1>Mascotas</H1>
-<form action="" method="post">
-
-<input type="submit" name="menu2" value="Agregar">
-<input type="submit" name="menu2" value="Remover">
-<input type="submit" name="menu2" value="Listar">
-
-
-</form>
-
-
-
 <?php
 
-$menuM = $_POST["menu2"];
 
 
-echo $menuM;
-
-
-switch($menuM)
-							 {
-								 
-								 case 'Agregar':
-									 include('./Mascotas/AgregarM.php');
-									 break;
-									 
-								 case 'Remover':
-									 include('./Mascotas/BorrarM.php');
-									 break;
-									 
-								 case 'Listar':
-									 include('./Mascotas/ListarM.php');
-									 break;
-
-					 
-							 }
+$nombre = $especie = $edad = "";
 
 
 
@@ -51,6 +11,44 @@ switch($menuM)
 
 
 
+
+  class Mascota
+  {
+  // Declaración de una propiedad
+  public $nombre = "";
+  public $especie = "";
+  public $edad = "";
+ 
+  // Declaración de un método
+  function set_nombre($nombre) {
+    $this->nombre = $nombre;
+  }
+  function get_name() {
+    return $this->nombre;
+  }
+
+  function set_especie($especie) {
+    $this->especie = $especie;
+  }
+  function get_especie() {
+    return $this->especie;
+  }
+  function set_edad($edad) {
+    $this->edad = $edad;
+  }
+  function get_edad() {
+    return $this->edad;
+  }
+
+
+
+
+
+
+
+
+
+  }
 
 
 ?>
