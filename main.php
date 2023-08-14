@@ -21,7 +21,7 @@ while($menu==0){
 switch($menu)
 {
     case'0':
-
+        exit();
         break;
 
 
