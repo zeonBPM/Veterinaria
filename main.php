@@ -2,7 +2,7 @@
 
 require_once 'Clientes.php';
 require_once 'Mascotas.php';
-
+require_once 'Turnos.php';
 
 $menu = '0';
 while($menu==0){
@@ -20,6 +20,10 @@ while($menu==0){
 
 switch($menu)
 {
+    case'0':
+
+        break;
+
 
     case'1':
         while($menu == '1'){
@@ -37,7 +41,7 @@ switch($menu)
         switch($menuC)
         {
             case'0':
-                $menu = 0;
+                $menu = $menuC = 0;
                 break;
             case '1':
                 $ncliente = new Cliente();
@@ -76,7 +80,7 @@ switch($menu)
             switch($menuM){
 
                 case'0':
-                    $menu = 0;
+                    $menu = $menuM = 0;
                     break;
 
                 case'1':
@@ -96,24 +100,7 @@ switch($menu)
                     $borrar = trim(fgets(STDIN));
                     unset($Mascotas[$borrar]);
                     break;
-
-
-
-
-
-
-
-
-
             }
-
-
-
-
-
-
-
-
 
         }
         break;
@@ -133,22 +120,28 @@ switch($menu)
             echo ("\n");
 
 
-            switch($menuM){
+            switch($menuT){
 
                 case'0':
-                    $menu = 0;
+                    $menu = $menuT = 0;
                     break;
 
                 case'1':
-
+                    $nturno = new Turno();
+                    agregar_turno($nturno);
+                    array_push($Turnos, $nturno);
                     break;
 
                 case'2':
-
+                    print_r($Turnos);
                     break;
 
                 case'3':
-
+                    $borrar = null;
+                    print_r($Turnos);
+                    echo "Seleccione turno a eliminar: \n";
+                    $borrar = trim(fgets(STDIN));
+                    unset($Turnos[$borrar]);
                     break;
 
 

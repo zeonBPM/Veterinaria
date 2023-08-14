@@ -1,6 +1,6 @@
 <?php
 
-$dueño = $mascota = $fecha = "";
+$Turnos = array();
 
 
 
@@ -46,5 +46,25 @@ $dueño = $mascota = $fecha = "";
 
 
   }
+  function agregar_turno($turno){
+    $dueño = $mascota = $fecha = $hora = null;
+    echo "Agregar nuevo turno \n";
+    echo "dueño: ";
+    $dueño =  trim(fgets(STDIN));
+    echo "mascota:  ";
+    $mascota = trim(fgets(STDIN));
+    echo "fecha:  ";
+    $fecha = trim(fgets(STDIN));
+    echo "hora:  ";
+    $hora = trim(fgets(STDIN));
 
+    $turno->set_dueño($dueño);
+    $turno->set_mascota($mascota);
+    $turno->set_fecha($fecha);
+    $turno->set_hora($hora);
+  
+  }
+  function borrar_turno($turno){
+    unset($Turnos[$turno]);
+  }
 ?>

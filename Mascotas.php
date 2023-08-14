@@ -49,7 +49,7 @@ $Mascotas = array();
   }
   function agregar_mascota($mascota){
     $dueño = $nombre = $especie = $edad = null;
-    echo "\n";
+    echo "Agregar nueva mascota \n";
     echo "dueño: ";
     $dueño =  trim(fgets(STDIN));
     echo "nombre:  ";

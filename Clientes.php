@@ -37,7 +37,7 @@ $Clientes = array();
   }
 function agregar_cliente($cliente){
   $nombre = $apellido = $telefono = '';
-  echo "\n";
+  echo "Agregar nuevo cliente \n";
   echo "nombre:  ";
   $nombre = trim(fgets(STDIN));
   echo "apellido:  ";
